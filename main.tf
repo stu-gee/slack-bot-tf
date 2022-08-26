@@ -1,5 +1,5 @@
 locals {
-  project_name = format("%s-%s-%s", "proj", resource.random_pet.random.id)
+  project_name = format("%s-%s", "proj", resource.random_pet.random.id)
 }
 
 resource "random_pet" "random" {
