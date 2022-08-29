@@ -13,3 +13,8 @@ resource "google_project_iam_member" "project" {
   role    = "roles/editor"
   member  = "user:${each.value}"
 }
+
+resource "local_file" "project_name" {
+  content = local.project_name
+  filename = "/tmp/environment_name.txt"
+}
